@@ -1,17 +1,17 @@
-
+#add the time library
 import time
 
-#creacion de la variable para almacenar la informacion de los vasos de agua
+#creation of the variable to store the information of the glasses of water
 vasos = { "yesid":0, "erick":0}
 
-#creacion del menu
+#menu creation
 def menu():
     print("Menu")
     print("1) Registrar vasos de agua")
     print("2) Ver usuarios y numero de vasos")
     print("4) Salir")
 
-    #seleccion de la opcion
+    #selection of the option
     opcion = int(input("Elige una opcion: "))
     if opcion == 1:
         registrar()
@@ -22,12 +22,12 @@ def menu():
     else:
         print("Opcion no valida")
 
-#funcion para registrar los vasos de agua
+#function to register the glasses of water
 def registrar():
     nombre = input("Ingresa tu nombre: ")
     numero_de_vasos = int(input("Cuantos vasos de agua has tomado hoy: "))
 
-    #verificamos si el usuario ingresado existe
+    # check if the entered user exists
     if nombre in vasos:
         vasos[nombre] += numero_de_vasos
     else:
@@ -35,7 +35,7 @@ def registrar():
     
 
 
-    #mostramos el diccionario
+    # show the dictionary
     print("llevas registrados", vasos[nombre], "vasos de agua")
     print("Regresando al menu...")
     time.sleep(2)
@@ -43,7 +43,7 @@ def registrar():
 
 
 
-#funcion para ver los usuarios y el numero de vasos de agua 
+#function to see the users and the number of glasses of water
 def ver():
     for usuario, vasos_agua in vasos.items():
         print(f"Usuario: {usuario}")
