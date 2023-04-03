@@ -143,7 +143,7 @@ const menuChat = (from, answer) => new Promise((resolve, reject) => {
                           "frequency_penalty": 0.5
                         };
                         const headers = {
-                          'Authorization': `Bearer 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`,
+                          'Authorization': ``,
                         };
                       
                         try {
